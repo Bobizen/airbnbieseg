@@ -1,7 +1,7 @@
 class CreateFlats < ActiveRecord::Migration[7.0]
   def change
     create_table :flats do |t|
-      t.references :creator_id, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
       t.string :country
       t.string :city
       t.string :region

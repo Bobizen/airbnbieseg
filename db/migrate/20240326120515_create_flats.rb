@@ -7,7 +7,7 @@ class CreateFlats < ActiveRecord::Migration[7.0]
       t.string :region
       t.string :zipcode
       t.text :description
-      t.decimal :price_per_night
+      t.float :price_per_night, precision: 10, scale: 2
       t.boolean :free_cancellation
 
       t.timestamps

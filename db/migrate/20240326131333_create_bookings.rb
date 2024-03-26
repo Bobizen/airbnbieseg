@@ -4,7 +4,6 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.references :user, foreign_key: true
       t.references :flat, foreign_key: true
 
-      t.integer :flat_id
       t.decimal :price_per_night, precision: 10, scale: 2
       t.decimal :price_in_total, precision: 10, scale: 2
       t.date :checkin_date

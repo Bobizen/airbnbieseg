@@ -1,2 +1,110 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+
+<section class="cards-container">
+    <!-- Row 1 -->
+    <div class="card-row">
+        <!-- Card 1 -->
+      <a href="https://www.airbnb.com/rooms/51260896", target="_blank">
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-928046990158446782/original/0a3d9d21-43ca-47ed-ba3c-6793839e2b3f.jpeg?im_w=720" alt="Card Image">
+            <p class="title">Merlimont, France</p>
+            <p class="location_distance">185 kilometers away</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+      </a>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/399f97fd-48ac-4ee6-8948-d53a0092f2d2.jpg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">200 kilometers away</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/cdab5d83-522b-45b7-9e40-d24664015247.jpg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">250 kilometers away</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/2c9c7296-c19f-4613-8724-b2a857edfb12.jpg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">Host type: Available dates:</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="card-row">
+        <!-- Card 5 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/aebbe3a5-8600-4cfe-8dc6-79c9776a9ec4.jpg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">Host type: Available dates:</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-51426351/original/2efd7e42-28c4-445e-aee5-bb3176126ce1.jpeg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">Host type: Available dates:</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-847698956629828582/original/3982103a-6753-4cee-9aac-7f932923e178.jpeg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">Host type: Available dates:</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <i class="heart-icon fa-regular fa-heart" style="color: #3b3a3a;" onclick="toggleHeart(this)"></i>
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-35487585/original/c14ff2b9-e9e6-4827-989e-80cdc0100b7e.jpeg?im_w=720" alt="Card Image">
+            <p class="title">Region, Country</p>
+            <p class="location_distance">Host type: Available dates:</p>
+            <p class="price_per_night">$ 957 night</p>
+        </div>
+    </div>
+   <!-- Repeat above block for more cards -->
+
+</section>
+
+<script>
+function toggleHeart(element) {
+  if (element.classList.contains('fa-regular')) {
+    element.classList.remove('fa-regular');
+    element.classList.add('fa-solid');
+    element.style.color = '#b70101';
+  } else {
+    element.classList.remove('fa-solid');
+    element.classList.add('fa-regular');
+    element.style.color = '#3b3a3a';
+  }
+}
+</script>
+
+
+</body>
+</html>

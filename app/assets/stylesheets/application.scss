@@ -14,4 +14,9 @@
 @import "pages/home";
 @import url("https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css");
 
+.mapboxgl-popup-content {
+  min-width: 20rem;
+  min-height: 15rem;
+}
+
 @import "pages/flat";

@@ -5,7 +5,8 @@ class FlatsController < ApplicationController
     @markers = @flats.geocoded.map do |flat|
       {
         lat: flat.latitude,
-        lng: flat.longitude
+        lng: flat.longitude,
+        price: flat.price_per_night
       }
     end
   end

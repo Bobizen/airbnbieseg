@@ -27,6 +27,10 @@ class FlatsController < ApplicationController
 
   end
 
+  def show
+    @flat = Flat.find(params[:id])
+  end
+
   private
 
   def flat_params

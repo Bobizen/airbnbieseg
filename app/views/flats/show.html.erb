@@ -1,0 +1,54 @@
+<div class="container">
+  <h2 class="mb-3 mt-3"><%= @flat.title %></h2>
+  <div class="row container-photos">
+    <div class="col-12 col-lg-8">
+      <%= cl_image_tag @flat.photos.first.key %>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="container-mini-photos">
+        <%  @flat.photos.each_with_index do |photo, i| %>
+          <% if (i>=1 && i<=4) %>
+            <%= cl_image_tag photo.key %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12 col-lg-8">
+      <h4>Subtitle</h4>
+      <h5>Description of the flat #rooms #bathrooms</h5>
+      <i class="fa-solid fa-star"></i><span> 2 reviews</span>
+      <div class="container-host">
+        <% if @flat.user.avatar.attached? %>
+          <%= cl_image_tag @flat.user.avatar.key, class:"avatar-small" %>
+        <% else %>
+          <%= image_tag "no-image-icon.png", alt:'Mini Profile Picture', class:"avatar" %>
+        <% end %>
+        <p><%= @flat.user.legal_name %></p>
+      </div>
+      <div class="mt-4">
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="container-price">
+        <strong><%= @flat.price_per_night%></strong><span>€ / night</span>
+        <div class="container-dates">
+          <div class="container-start-date">
+            <p>start date</p>
+          </div>
+          <div class="container-end-date">
+            <p>end date</p>
+          </div>
+        </div>
+        <div class="container-guest">
+          <p>Number of guest</p>
+        </div>
+        <button class="btn btn-primary mt-2 button-reserve">Reserve</button>
+      </div>
+    </div>
+  </div>
+</div>

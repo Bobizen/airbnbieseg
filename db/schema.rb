@@ -91,6 +91,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_27_102752) do
     t.boolean "free_cancellation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address"
+    t.string "title"
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_flats_on_user_id"

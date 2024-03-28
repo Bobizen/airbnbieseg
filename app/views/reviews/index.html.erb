@@ -1,0 +1,18 @@
+<!-- app/views/reviews/index.html.erb -->
+<div class="container">
+  <h2>All Reviews</h2>
+  <% @reviews.each do |review| %>
+    <div class="review">
+      <div class="user-info">
+        <p><%= review.user_id %> | <%= review.title %></p>
+      </div>
+      <div class="score-created">
+        <p>Score: <%= review.score %></p>
+        <p><%= review.created_at %></p>
+      </div>
+      <div class="comment">
+        <p><strong>Comment:</strong> <%= review.comment %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

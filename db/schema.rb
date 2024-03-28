@@ -51,8 +51,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_28_110810) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "flat_id"
-    t.decimal "price_per_night", precision: 10, scale: 2
-    t.decimal "price_in_total", precision: 10, scale: 2
+    t.float "price_per_night"
+    t.float "price_in_total"
     t.date "checkin_date"
     t.date "checkout_date"
     t.integer "guests"

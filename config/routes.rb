@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :flats, only: [:index, :new, :create, :show] do
     resources :reviews, only: [:new, :create, :index]
   end
-
-  # Routes for users
+  
+  resources :flats, only: [:index, :new, :create, :show]
   resources :users, only: [:show, :edit]
 
   # Route for showing all reviews

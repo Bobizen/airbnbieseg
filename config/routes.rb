@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   # routes for flats
   resources :flats, only: [:index, :new, :create, :show]
+
+  
   resources :users, only: [:show, :edit]
 end

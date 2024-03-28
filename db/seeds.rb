@@ -23,7 +23,7 @@ Amenitie.create(label: "Hairdryer")
 User.create(email: "toto1@ieseg.fr", password: "supermotdepasse", legal_name: "user test")
 
 # seed for flats
-Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75012", title: "Beautiful place to spend some days in Paris", price_per_night: 250, free_cancellation: false)
-Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75001", title: "Small appartment in the center of Paris", price_per_night: 150, free_cancellation: false)
-Flat.create(user_id: 1, city: "Courbevoie", country: "France", zipcode: "92400", title: "Big house for group close to La Défense", price_per_night: 399.99, free_cancellation: true)
-Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75008", title: "Amazing appartment with view on the Eiffel Tower", price_per_night: 500, free_cancellation: false)
+Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75012", title: "Beautiful place to spend some days in Paris", price_per_night: 250, free_cancellation: false, homepagetitle: "Merlimont, France")
+Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75001", title: "Small appartment in the center of Paris", price_per_night: 150, free_cancellation: false, homepagetitle: "Merlimont, France")
+Flat.create(user_id: 1, city: "Courbevoie", country: "France", zipcode: "92400", title: "Big house for group close to La Défense", price_per_night: 399.99, free_cancellation: true, homepagetitle: "Merlimont, France")
+Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75008", title: "Amazing appartment with view on the Eiffel Tower", price_per_night: 500, free_cancellation: false, homepagetitle: "Merlimont, France")

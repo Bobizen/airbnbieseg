@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   # routes for flats
-  resources :flats, only: [:index, :new, :create, :show]
+  resources :flats, only: [:index, :new, :create, :show] do
+    resources :reviews, only: [:new, :create, :index]
+  end
+
+  # Routes for users
   resources :users, only: [:show, :edit]
+
+  # Route for showing all reviews
+  get '/reviews', to: 'reviews#index', as: 'reviews'
 end

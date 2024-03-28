@@ -1,0 +1,38 @@
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.review {
+  background-color: #ffffff;
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 25px; /* margin-bottom between each review box  */
+
+  .user-info {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  .score-created {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+
+  .comment {
+    p {
+      margin: 5px 0;
+    }
+  }
+}

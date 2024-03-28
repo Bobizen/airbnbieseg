@@ -4,6 +4,7 @@ body,p{
 
 .card-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between; /* Gap between left and right cards */
   justify-content: center;
   padding-top: 20px;
@@ -19,6 +20,7 @@ body,p{
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   margin: 0 10px 20px; /* Add spacing between cards */
+  border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .card img {
@@ -26,6 +28,7 @@ body,p{
   height: 300px; /* Set a fixed height */
   object-fit: cover; /* Ensure the image covers the entire space */
   margin-bottom: 10px;
+  border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .card p {
@@ -59,4 +62,36 @@ body,p{
 
 a {
   text-decoration: none; /* Remove underline from links */
+  color:#000;
+}
+
+.image-carousel {
+  display: flex; /* 使用 flex 布局 */
+  overflow-x: auto; /* 水平滚动 */
+  scroll-snap-type: x mandatory; /* 开启水平滚动分页效果 */
+  -webkit-overflow-scrolling: touch; /* 启用平滑滚动 */
+}
+
+.carousel-image {
+  flex: 0 0 auto; /* 禁止图片缩放 */
+  scroll-snap-align: start; /* 图片对齐到滚动容器的开头 */
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
 }

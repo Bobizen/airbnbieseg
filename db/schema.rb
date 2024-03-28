@@ -93,6 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_28_110810) do
     t.datetime "updated_at", null: false
     t.string "address"
     t.string "title"
+    t.string "street_address"
     t.float "latitude"
     t.float "longitude"
     t.string "homepagetitle"

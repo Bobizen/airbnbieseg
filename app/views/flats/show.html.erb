@@ -24,7 +24,7 @@
       <i class="fa-solid fa-star"></i><span> 2 reviews</span>
       <div class="container-host">
         <% if @flat.user.avatar.attached? %>
-          <%= cl_image_tag @flat.user.avatar.key, class:"avatar-small" %>
+          <%= cl_image_tag @flat.user.avatar.key, class:"avatar" %>
         <% else %>
           <%= image_tag "no-image-icon.png", alt:'Mini Profile Picture', class:"avatar" %>
         <% end %>

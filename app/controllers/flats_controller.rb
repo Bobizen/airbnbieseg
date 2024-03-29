@@ -38,6 +38,10 @@ class FlatsController < ApplicationController
     @booking = Booking.new
   end
 
+  def dashboard
+
+  end
+
   private
 
   def flat_params

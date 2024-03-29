@@ -7,8 +7,11 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
     resources :reviews, only: [:new, :create, :index]
   end
-  
+
   resources :users, only: [:show, :edit]
+  get '/profile', to: 'users#profile', as: 'profile'
+  put '/users/:id', to: 'users#update', as: 'user_update'
+  get '/dashboard', to: 'flats#dashboard', as: 'flat_dashboard'
 
   # Route for showing all reviews
   get '/reviews', to: 'reviews#index', as: 'reviews'

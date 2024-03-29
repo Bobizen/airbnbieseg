@@ -60,6 +60,12 @@ class FlatsController < ApplicationController
 
   end
 
+  def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy
+    redirect_to flat_dashboard_path, status: :see_other
+  end
+
   private
 
   def flat_params

@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
+require 'faker'
 
 # seed for amenities
 Amenitie.create(label: "Television")
@@ -25,17 +26,17 @@ User.create(email: "user11@ieseg.fr", password: "mbamba", legal_name: "user test
 User.create(email: "user22@ieseg.fr", password: "mbamba", legal_name: "Oli Wander")
 
 # seed for flats
-flat1 = Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75012", title: "Beautiful place to spend some days in Paris", price_per_night: 250, free_cancellation: false, homepagetitle: "Merlimont, France")
+flat1 = Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75012", title: "Beautiful place to spend some days in Paris", price_per_night: 250, free_cancellation: false, homepagetitle: "Merlimont, France", address: Faker::Address.full_address)
 file1 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711671972/development/zlaeyvbdyzrb5215wtl10i50bw2l.webp')
 flat1.photos.attach(io: file1, filename: 'image1.webp', content_type: 'image/webp')
 
-flat2 = Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75001", title: "Small appartment in the center of Paris", price_per_night: 150, free_cancellation: false, homepagetitle: "Merlimont, France")
+flat2 = Flat.create(user_id: 1, city: "Paris", country: "France", zipcode: "75001", title: "Small appartment in the center of Paris", price_per_night: 150, free_cancellation: false, homepagetitle: "Eiffle, France", address: Faker::Address.full_address)
 file2 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711641235/development/z8hpr7og8ned1glnvb3ony7mey9r.webp')
 flat2.photos.attach(io: file2, filename: 'image2.webp', content_type: 'image/webp')
 file3 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711641233/development/tpkg2yo0f2n2rdvkc2qp2v6w9p6n.webp')
 flat2.photos.attach(io: file3, filename: 'image3.webp', content_type: 'image/webp')
 
-flat3 = Flat.create(user_id: 2, city: "Courbevoie", country: "France", zipcode: "92400", title: "Big house for group close to La Défense", price_per_night: 399.99, free_cancellation: true, homepagetitle: "Merlimont, France")
+flat3 = Flat.create(user_id: 2, city: "Courbevoie", country: "France", zipcode: "92400", title: "Big house for group close to La Défense", price_per_night: 399.99, free_cancellation: true, homepagetitle: "Roxy's House, France", address: Faker::Address.full_address)
 file4 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711639957/development/bu8pzuez0kcojunots2c7vjexk1n.webp')
 flat3.photos.attach(io: file4, filename: 'image4.webp', content_type: 'image/webp')
 file5 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711553992/development/k91s3p9gxy9pprvgrn8saf5rodoz.jpg')
@@ -43,7 +44,7 @@ flat3.photos.attach(io: file5, filename: 'image5.jpg', content_type: 'image/jpg'
 file6 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711639957/development/bu8pzuez0kcojunots2c7vjexk1n.webp')
 flat3.photos.attach(io: file6, filename: 'image6.webp', content_type: 'image/webp')
 
-flat4 = Flat.create(user_id: 2, city: "Paris", country: "France", zipcode: "75008", title: "Amazing appartment with view on the Eiffel Tower", price_per_night: 500, free_cancellation: false, homepagetitle: "Merlimont, France")
+flat4 = Flat.create(user_id: 2, city: "Paris", country: "France", zipcode: "75008", title: "Amazing appartment with view on the Eiffel Tower", price_per_night: 500, free_cancellation: false, homepagetitle: "Oliver's penthouse, France", address: Faker::Address.full_address)
 file7 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711639957/development/bu8pzuez0kcojunots2c7vjexk1n.webp')
 flat4.photos.attach(io: file7, filename: 'image7.webp', content_type: 'image/webp')
 file8 = URI.open('https://res.cloudinary.com/dq6q7camh/image/upload/v1711553992/development/k91s3p9gxy9pprvgrn8saf5rodoz.jpg')

@@ -1,7 +1,69 @@
 <div class="container">
-  <h1>My Profile</h1>
-  <h3>My name</h3>
-  <%= @user.legal_name %>
-  <h3>My address</h3>
-  <%= @user.address %>
+  <div class="flexbox">
+   <div class="profile-card">
+      <div class="profile-details">
+          <div class="avatar">
+              <img src="avatar.jpg" alt="User Avatar">
+          </div>
+          <hr>
+          <div class="user-info">
+              <h2>Username</h2>
+              <h3>User Type</h3>
+          </div>
+      </div>
+      <div class="profile-description">
+          <h2>00</h2>
+          <p>Reviews</p>
+          <hr>
+          <h2>1</h2>
+          <p>Years on Airbnb</p>
+      </div>
+
+  </div>
+  <div>
+      <h1>My Profile</h1>
+      <h3>My name</h3>
+      <%= @user.legal_name %>
+      <h3>My address</h3>
+      <%= @user.address %>
+  </div>
 </div>
+
+
+</div>
+
+  <div class="container">
+      <h1>Review by me</h1>
+        <div class="review-container">
+          <div class="review-card">
+            <p>She was a great guest. She was independent, quiet and left things clean. I enjoyed meeting her and would definitely host her again!</p>
+            <div class="container">
+              <div class="avatar">
+              <img src="avatar.jpg" alt="User Avatar">
+              </div>
+              <%= @user.legal_name %>
+              <p>Date</p>
+            </div>
+          </div>
+                  <div class="review-card">
+            <p>She was a great guest. She was independent, quiet and left things clean. I enjoyed meeting her and would definitely host her again!</p>
+            <div class="container">
+              <div class="avatar">
+              <img src="avatar.jpg" alt="User Avatar">
+              </div>
+              <%= @user.legal_name %>
+              <p>Date</p>
+            </div>
+          </div>
+                  <div class="review-card">
+            <p>She was a great guest. She was independent, quiet and left things clean. I enjoyed meeting her and would definitely host her again!</p>
+            <div class="container">
+              <div class="avatar">
+              <img src="avatar.jpg" alt="User Avatar">
+              </div>
+              <%= @user.legal_name %>
+              <p>Date</p>
+            </div>
+          </div>
+        </div>
+  </div>

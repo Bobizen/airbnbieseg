@@ -14,7 +14,7 @@ class PagesController < ApplicationController
         lng: flat.longitude,
         price: flat.price_per_night,
         photos: flat.photos.map { |photo| photo.url },
-        title: flat
+        title: flat.homepagetitle
       }
     end
   end

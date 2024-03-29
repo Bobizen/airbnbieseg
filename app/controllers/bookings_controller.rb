@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.price_in_total = params[:booking][:price_in_total].to_f
 
     if @booking.save
-      redirect_to flat_path(@flat), notice: "booking done!"
+      redirect_to booking_list_path, notice: "booking done!"
     else
       render flat_path(@flat), status: :unprocessable_entity
     end

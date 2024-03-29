@@ -1,0 +1,51 @@
+.profile-card {
+  width: 483px;
+  height: 300px;
+  border-radius: 13px;
+  background-color: #ffffff;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 10px;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.user-info {
+  margin-left: 20px;
+}
+
+.profile-description {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-description h2 {
+  margin-top: 0;
+}
+
+.profile-description hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.review-card {
+  width: 300px;
+  height: 200px;
+  border-radius: 13px;
+  background-color: #ffffff;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 10px;
+}

@@ -1,13 +1,13 @@
 <div class="container">
   <h1>My dashboard</h1>
-  <%= link_to "Add a flat", new_flat_path, class: "btn btn-primary" %>
   <% @flats.each do |flat| %>
     <div class="card-flat">
       <%= cl_image_tag flat.photos.first.key %>
       <div class="card-flat-infos">
         <h2><%= flat.title %></h2>
-        <p><%= flat.description %></p>
-        <%= link_to "Edit the flat", edit_flat_path(flat.id), class: "nav-link" %>
+        <p class="mb-3"><%= flat.description %></p>
+        <%= link_to "Edit the flat", edit_flat_path(flat.id), class: "btn btn-primary" %>
+        <%= link_to "Delete the flat", flat_delete_path(flat.id),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} ,class: "btn btn-danger" %>
       </div>
       <div class="card-flat-additionnal">
         <h3># reviews</h3>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+</head>
+<body>
+    <main>
+        <div class="confirmation-message">
+            <h1>Confirmation</h1>
+            <p>Thank you for your reservation!</p>
+        </div>
+        <div class="reservation-details">
+            <h2>Reservation Details</h2>
+            <div class="reservation-info">
+                <p><%= @reservation.title %></p>
+                <p><%= @reservation. %></p>
+            </div>
+            <div class="price-details">
+                <p>Price details: &#36;<%= @reservation.price %> x <%= @reservation.nights %> nights.</p>
+                <p>Total: &#36;<%= @reservation.total_price %></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

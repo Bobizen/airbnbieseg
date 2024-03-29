@@ -14,7 +14,7 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: "mapbox://styles/mapbox/standard"
     })
 
     this.#addMarkersToMap()
@@ -24,31 +24,15 @@ export default class extends Controller {
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
 
-      console.log(marker,"Market")
-
-      var popup = new mapboxgl.Popup({
-      })
-
-      var el = document.createElement('div');
-      el.insertAdjacentHTML("beforeend",`<span class="font-weight-bold ">$${marker.price}</span>`)
-      el.className = 'badge badge-pill badge-light';
-      el.style.backgroundColor = 'black';
-
-      var marker = new mapboxgl.Marker(el)
-        .setLngLat([ marker.lng, marker.lat ])
-        .addTo(this.map)
-        .setPopup(popup)
-
-      marker.getElement().addEventListener('click', function() {
-      popup.setHTML(`<div class="card">
+      let html = `<div class="card">
       <div id="carouselExampleIndicators" class="carousel slide" >
         <div class="carousel-indicators">
-        ${marker?.photos?.map((image, index) => {
+        ${marker.photos?.map((image, index) => {
           return `<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="${index === 0 ? 'active' : ''}" aria-current="true" aria-label="Slide ${index + 1}"></button>`
         })}
         </div>
         <div class="carousel-inner" >
-        ${marker?.photos?.map((image, index) => {
+        ${marker.photos?.map((image, index) => {
           return `<div class="carousel-item ${index === 0 ? 'active' : ''}">
             <img src="${image}"  alt="..." style="min-width: 20rem; min-height:8rem; object-fit:cover;" >
           </div>`
@@ -66,7 +50,23 @@ export default class extends Controller {
         </button>
     </div>
        <h5 class="card-title">${marker.title}</h5>
-    </div>`)
+    </div>`
+
+      var popup = new mapboxgl.Popup({
+      })
+
+      var el = document.createElement('div');
+      el.insertAdjacentHTML("beforeend",`<span class="font-weight-bold ">$${marker.price}</span>`)
+      el.className = 'badge badge-pill badge-light';
+      el.style.backgroundColor = 'black';
+
+      var marker = new mapboxgl.Marker(el)
+        .setLngLat([ marker.lng, marker.lat ])
+        .addTo(this.map)
+        .setPopup(popup)
+
+      marker.getElement().addEventListener('click', function() {
+      popup.setHTML(html)
       .addTo(map);
         });
 

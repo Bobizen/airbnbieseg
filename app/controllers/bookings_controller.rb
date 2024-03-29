@@ -21,11 +21,12 @@ class BookingsController < ApplicationController
 
   end
 
-  def confirm
-
+  def list
+    @bookings = Booking.where(user_id: current_user.id).order(checkin_date: :asc)
   end
 
   private
+
   def booking_params
     params.require(:booking).permit(:checkin_date, :checkout_date, :price_per_night, :price_in_total, :flat_id, :guests)
   end

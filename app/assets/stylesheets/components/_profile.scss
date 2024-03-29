@@ -11,11 +11,21 @@
   padding: 10px;
 }
 
+.container{
+  justify-content: center;
+}
+
 .profile-details {
   flex: 1;
   display: flex;
   padding: 20px;
   border-right: 1px solid #ccc;
+}
+
+.profile-details hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
 }
 
 .user-info {
@@ -38,7 +48,7 @@
 }
 
 .review-card {
-  width: 300px;
+  width: 450px;
   height: 200px;
   border-radius: 13px;
   background-color: #ffffff;
@@ -48,4 +58,19 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 10px;
+  border: 1px solid #ccc
+}
+
+.review-container {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 自动填充列，最小200px宽度，剩余空间等分 */
+  justify-content: center; /* 水平居中对齐 */
+  align-items: center; /* 垂直居中对齐 */
+  grid-gap: 100px; /* 可以调整卡片之间的间距 */
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

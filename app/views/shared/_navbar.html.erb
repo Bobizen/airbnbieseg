@@ -8,13 +8,24 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <form class="d-flex" action="/search" method="GET">
+    <%# <form class="d-flex" action="/search" method="GET">
       <input class="form-control-navbar me-2" type="search" placeholder="Search" aria-label="Search" name="q">
         <button class="btn btn-outline-secondary" type="submit">
           <!-- 🔍 -->
           <span class="search-icon" aria-hidden="true">&#128269;</span>
         </button>
-    </form>
+    </form> %>
+
+    <div class="col-sm-8 my-3">
+      <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control-navbar me-2",
+              placeholder: "Type a flat or city or zipcode"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
 
 
 

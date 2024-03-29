@@ -11,7 +11,9 @@ class FlatsController < ApplicationController
       {
         lat: flat.latitude,
         lng: flat.longitude,
-        price: flat.price_per_night
+        price: flat.price_per_night,
+        photos: flat.photos,
+        title: flat.homepagetitle
       }
     end
   end

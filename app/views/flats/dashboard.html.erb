@@ -1,4 +1,20 @@
 <div class="container">
   <h1>My dashboard</h1>
   <%= link_to "Add a flat", new_flat_path, class: "btn btn-primary" %>
+  <% @flats.each do |flat| %>
+    <div class="card-flat">
+      <%= cl_image_tag flat.photos.first.key %>
+      <div class="card-flat-infos">
+        <h2><%= flat.title %></h2>
+        <p><%= flat.description %></p>
+        <%= link_to "Edit the flat", edit_flat_path(flat.id), class: "nav-link" %>
+      </div>
+      <div class="card-flat-additionnal">
+        <h3># reviews</h3>
+        <p><%= flat.reviews.count %></p>
+        <h3># bookings</h3>
+        <p><%= flat.bookings.count %></p>
+      </div>
+    </div>
+  <% end %>
 </div>

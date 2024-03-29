@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   # routes for flats
-  resources :flats, only: [:index, :new, :create, :show] do
+  resources :flats, only: [:index, :new, :create, :show, :edit, :update] do
     resources :bookings, only: [:new, :create]
     resources :reviews, only: [:new, :create, :index]
   end

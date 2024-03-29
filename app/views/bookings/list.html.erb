@@ -1,0 +1,26 @@
+<section class="trip-section">
+    <h1>Trip</h1>
+    <h2>Upcoming Reservations</h2>
+    <% @bookings.each do |booking| %>
+      <div class="booking-card">
+        <% flat = booking.flat %>
+        <%= link_to flat_path(flat) do %>
+        <div class="booking-info">
+          <p class="booking-title"><%= flat.homepagetitle %></p>
+          <p class="booking-dates">Check-in: <%= booking.checkin_date %> - Check-out: <%= booking.checkout_date %></p>
+          <p class="booking-address"><%= flat.address %></p>
+          <% if flat.photos.attached? %>
+            <div class="booking-image-container">
+              <div class="booking-image-carousel">
+                <% flat.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, class: "booking-carousel-image" %>
+                <% end %>
+              </div>
+            </div>
+          <% else %>
+            <%= image_tag "no-image-icon.png", alt: 'No Image' %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+</section>

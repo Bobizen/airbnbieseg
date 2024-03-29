@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get '/profile', to: 'users#profile', as: 'profile'
   put '/users/:id', to: 'users#update', as: 'user_update'
   get '/dashboard', to: 'flats#dashboard', as: 'flat_dashboard'
+  get '/bookings/confirmation', to: 'bookings#confirmation', as: 'booking_confirmation'
+  get '/bookings/detail', to: 'bookings#detail', as: 'booking_detail'
+  get '/bookings/list', to: 'bookings#list', as: 'booking_list'
 
   # Route for showing all reviews
   get '/reviews', to: 'reviews#index', as: 'reviews'

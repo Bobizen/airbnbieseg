@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/bookings/confirmation', to: 'bookings#confirmation', as: 'booking_confirmation'
   get '/bookings/detail', to: 'bookings#detail', as: 'booking_detail'
   get '/bookings/list', to: 'bookings#list', as: 'booking_list'
+  get '/show', to: 'users#show', as: 'profile_dashboard'
 
   # Route for showing all reviews
   get '/reviews', to: 'reviews#index', as: 'reviews'

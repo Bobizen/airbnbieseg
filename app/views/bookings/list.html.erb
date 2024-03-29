@@ -21,6 +21,7 @@
             <%= image_tag "no-image-icon.png", alt: 'No Image' %>
           <% end %>
         <% end %>
+        <%= link_to "Add a review", new_flat_review_path(flat.id), class:"btn btn-primary mt-3" %>
       </div>
     <% end %>
 </section>

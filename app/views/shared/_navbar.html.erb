@@ -55,6 +55,7 @@
 
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Dashboard", profile_dashboard_path ,class: "dropdown-item" %>
               <%= link_to "Profile", profile_path ,class: "dropdown-item" %>
               <%= link_to "My reservations", booking_list_path, class: "dropdown-item" %>
               <% if current_user.flats.count > 0 %>

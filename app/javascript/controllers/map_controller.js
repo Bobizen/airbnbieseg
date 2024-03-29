@@ -50,6 +50,7 @@ export default class extends Controller {
         </button>
     </div>
        <h5 class="card-title">${marker.title}</h5>
+       <a href="flats/${marker.id}" class="btn btn-primary">Book now!</a>
     </div>`
 
       var popup = new mapboxgl.Popup({
